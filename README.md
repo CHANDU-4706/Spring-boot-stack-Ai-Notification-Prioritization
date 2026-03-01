@@ -11,39 +11,43 @@ This repository contains the Java/Spring Boot reference implementation of the Cy
 
 ---
 
-## 🛠️ Setup & Running Locally
+## 🛠️ Local Development Setup (Get Running in 2 Minutes)
+
+Follow these exact steps to run the complete Spring Boot engine on your local machine.
 
 ### 1. Prerequisites
-- **Java**: JDK 21
-- **Maven**: 3.9+
-- **Database**: PostgreSQL (Locally installed or Cloud-based like Neon/AWS RDS).
-- **Node.js**: v18+ (for the frontend)
+- **Java**: JDK 21 installed (`java -version` should show 21).
+- **Maven**: 3.9+ installed (`mvn -version`).
+- **Database**: PostgreSQL Access (Local or Cloud like Neon).
+- **Node.js**: v18+ (for the frontend).
 
-### 2. Environment Variables (`application.properties`)
-Navigate to `backend/src/main/resources/application.properties`. Update the following keys:
-- `server.port`: The port the Tomcat server will run on (Default: `8082`).
-- `spring.datasource.url`: The JDBC connection string to your PostgreSQL instance (e.g., `jdbc:postgresql://localhost:5432/cyepro`).
-- `spring.datasource.username` / `password`: Your Postgres credentials.
-- `groq.api.key`: The authentication key for the LLaMA 3.3 model from the [Groq Console](https://console.groq.com/).
-- `groq.model`: Default is `llama-3.3-70b-versatile`.
+### 2. Backend Installation & Start
+```bash
+# Navigate to backend
+cd spring-boot-stack/backend
 
-*(Note: We use `application.properties` natively in Spring Boot rather than a `.env` file.)*
+# Run the application (Maven will handle dependencies automatically)
+mvn spring-boot:run
+```
+*Note: Ensure your `src/main/resources/application.properties` is configured with your database and Groq API keys before running.*
+*The API will be live at `http://localhost:8082`.*
 
-### 3. Running the Backend
-1. Open a terminal and navigate to the backend folder: `cd spring-boot-stack/backend`
-2. Run the application: `mvn spring-boot:run` (Runs on `http://localhost:8082`)
+### 3. Frontend Installation & Start
+```bash
+# Navigate to frontend (in a new terminal window)
+cd spring-boot-stack/frontend
 
-### 4. Running the Frontend
-1. Open a new terminal and navigate to the frontend folder: `cd spring-boot-stack/frontend`
-2. Install dependencies: `npm install`
-3. Start the React server on port 3001 to avoid conflicting with the MERN stack: `npm run dev -- -p 3001` (Runs on `http://localhost:3001`)
+# Install all dependencies
+npm install
 
-### 5. Running Both Together
-Ensure both terminals are running simultaneously. The Next.js frontend is configured to communicate with the REST API at `http://localhost:8082/api`.
+# Start development server on port 3001
+npm run dev -- -p 3001
+```
+*The Dashboard will be live at `http://localhost:3001`.*
 
 ---
 
-## 💻 Tech Stack
+## 💻 Tech Stack Justification
 
 - **Java 21 + Spring Boot (v3.2):** Chosen for its enterprise-grade robustness, strict type safety, and massive ecosystem for building highly concurrent REST services.
 - **Spring Data JPA + PostgreSQL:** Chosen to enforce strict ACID compliance and structured relational integrity on the `AuditLog` and `Rules` layers, guaranteeing zero orphaned data records.
@@ -106,19 +110,19 @@ If the `RestTemplate` throws an exception (timeout, 5xx) or fails to parse three
 ## 🖼️ Visual Evidence
 
 ### System Dashboard (Emerald Glassmorphism)
-![Dashboard](./dashboard_page_spring_boot_1772359501321.png)
+![Dashboard](./screenshots/dashboard_page_spring_boot_1772359501321.png)
 *Real-time monitoring of system health with premium emerald glassmorphism branding.*
 
 ### Event Simulator
-![Simulator](./simulator_page_spring_boot_1772359529545.png)
+![Simulator](./screenshots/simulator_page_spring_boot_1772359529545.png)
 *Interactive simulator designed with high-contrast emerald highlights for Spring Boot stack identification.*
 
 ### Audit Logs & Java Persistence
-![Audit Logs](./audit_log_page_spring_boot_1772359548183.png)
+![Audit Logs](./screenshots/audit_log_page_spring_boot_1772359548183.png)
 *Complete decision history stored in Neon PostgreSQL, including exact AI reasoning.*
 
 ### Performance Metrics
-![Metrics](./metrics_page_1772359469634.png)
+![Metrics](./screenshots/metrics_page_1772359469634.png)
 *Throughput and latency visualization with custom Emerald/Teal charting.*
 
 ---
