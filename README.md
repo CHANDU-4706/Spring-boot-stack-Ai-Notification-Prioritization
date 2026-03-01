@@ -103,6 +103,26 @@ If the `RestTemplate` throws an exception (timeout, 5xx) or fails to parse three
 
 ---
 
+## 🖼️ Visual Evidence
+
+### System Dashboard (Emerald Glassmorphism)
+![Dashboard](./dashboard_page_spring_boot_1772359501321.png)
+*Real-time monitoring of system health with premium emerald glassmorphism branding.*
+
+### Event Simulator
+![Simulator](./simulator_page_spring_boot_1772359529545.png)
+*Interactive simulator designed with high-contrast emerald highlights for Spring Boot stack identification.*
+
+### Audit Logs & Java Persistence
+![Audit Logs](./audit_log_page_spring_boot_1772359548183.png)
+*Complete decision history stored in Neon PostgreSQL, including exact AI reasoning.*
+
+### Performance Metrics
+![Metrics](./metrics_page_1772359469634.png)
+*Throughput and latency visualization with custom Emerald/Teal charting.*
+
+---
+
 ## ⚠️ Known Limitations
 
 - **Scalability of Semantic Deduplication:** The Sorensen-Dice string calculation happens in the JVM memory space by iterating over the last hour of user data pulled from Postgres. Under immense load, fetching bulk text fields per user creates a DB I/O bottleneck. A production version would compute a MinHash signature at ingestion time and use Locality-Sensitive Hashing (LSH) directly inside PostgreSQL via extensions.
