@@ -1,10 +1,9 @@
 services:
   - type: web
     name: spring-notification-engine
-    env: java
+    runtime: docker
     rootDir: backend
-    buildCommand: ./mvnw clean package -DskipTests
-    startCommand: java -jar target/*.jar
+    dockerfilePath: ./Dockerfile
     plan: free
     envVars:
       - key: SPRING_DATASOURCE_URL
