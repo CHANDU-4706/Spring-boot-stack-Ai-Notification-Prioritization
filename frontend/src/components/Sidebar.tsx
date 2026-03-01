@@ -26,7 +26,7 @@ const navigation = [
 export function Sidebar() {
     const pathname = usePathname();
 
-    if (pathname === '/login') return null;
+    if (pathname === '/login' || pathname === '/') return null;
 
     return (
         <div className="flex h-full w-64 flex-col bg-sidebar border-r border-sidebar-border text-sidebar-foreground shadow-2xl relative z-20">
