@@ -3,9 +3,9 @@
 This repository contains the Java/Spring Boot reference implementation of the CyePro Notification Prioritization Engine, achieving 100% feature parity with the Node.js/MERN stack version.
 
 ## 🚀 Live Deployments
-- **Frontend (Vercel):** `[INSERT_VERCEL_URL]`
-- **Backend (Render/Railway/AWS):** `[INSERT_BACKEND_URL]`
-- **System Health Endpoint:** `[INSERT_BACKEND_URL]/api/health`
+- **Frontend (Vercel):** [https://cyepro-spring-frontend.vercel.app](https://cyepro-spring-frontend.vercel.app)
+- **Backend (Render):** [https://spring-notification-engine.onrender.com](https://spring-notification-engine.onrender.com)
+- **System Health Endpoint:** [https://spring-notification-engine.onrender.com/api/health](https://spring-notification-engine.onrender.com/api/health)
 
 *Note: The deployed database is seeded. Any reviewer can log into the dashboard immediately without creating an account. The credentials are provided directly on the login screen.*
 
