@@ -22,18 +22,25 @@ Follow these exact steps to run the complete Spring Boot engine on your local ma
 - **Node.js**: v18+ (for the frontend).
 
 ### 2. Backend Installation & Start
-```bash
+```powershell
 # Navigate to backend
 cd spring-boot-stack/backend
 
-# Run the application (Maven will handle dependencies automatically)
-mvn spring-boot:run
+# IMPORTANT: This project requires Java 17+. 
+# If your system defaults to Java 8, run these lines first:
+$env:JAVA_HOME = "C:\Program Files\Java\jdk-21"
+$env:Path = "$env:JAVA_HOME\bin;" + $env:Path
+
+# Run using the included Maven Wrapper (no local Maven install needed)
+.\mvnw.cmd spring-boot:run
 ```
-*Note: Ensure your `src/main/resources/application.properties` is configured with your database and Groq API keys before running.*
-*The API will be live at `http://localhost:8082`.*
+*Note: The API will be live at `http://localhost:8082`.*
+
+> [!IMPORTANT]
+> **Java Version Error?** If you see a `Type org.springframework.boot.maven.RunMojo not present` or `UnsupportedClassVersionError`, it means the terminal is using Java 8. Ensure you run the `$env:JAVA_HOME` commands above to point to JDK 17 or 21.
 
 ### 3. Frontend Installation & Start
-```bash
+```powershell
 # Navigate to frontend (in a new terminal window)
 cd spring-boot-stack/frontend
 
