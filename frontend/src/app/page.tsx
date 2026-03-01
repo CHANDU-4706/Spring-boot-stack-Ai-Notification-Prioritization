@@ -1,3 +1,4 @@
+// Redirect fix verification: Force redeploy v2.0.1
 "use client";
 
 import LoginPage from "./login/page";
