@@ -110,19 +110,19 @@ If the `RestTemplate` throws an exception (timeout, 5xx) or fails to parse three
 ## 🖼️ Visual Evidence
 
 ### System Dashboard (Emerald Glassmorphism)
-![Dashboard](./screenshots/dashboard_page_spring_boot_1772359501321.png)
+![Dashboard](./screenshots/dashboard.png)
 *Real-time monitoring of system health with premium emerald glassmorphism branding.*
 
 ### Event Simulator
-![Simulator](./screenshots/simulator_page_spring_boot_1772359529545.png)
+![Simulator](./screenshots/simulator.png)
 *Interactive simulator designed with high-contrast emerald highlights for Spring Boot stack identification.*
 
 ### Audit Logs & Java Persistence
-![Audit Logs](./screenshots/audit_log_page_spring_boot_1772359548183.png)
+![Audit Logs](./screenshots/audit.png)
 *Complete decision history stored in Neon PostgreSQL, including exact AI reasoning.*
 
 ### Performance Metrics
-![Metrics](./screenshots/metrics_page_1772359469634.png)
+![Metrics](./screenshots/metrics.png)
 *Throughput and latency visualization with custom Emerald/Teal charting.*
 
 ---
