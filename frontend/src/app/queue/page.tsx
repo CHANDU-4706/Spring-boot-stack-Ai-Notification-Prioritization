@@ -4,20 +4,20 @@ import { useState, useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Loader2, Clock, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import axios from "axios";
+import api from "@/lib/api";
 
 export default function QueuePage() {
-    const [queue, setQueue] = useState([]);
+    const [queue, setQueue] = useState<any[]>([]);
     const [isLoading, setIsLoading] = useState(true);
     const [mounted, setMounted] = useState(false);
 
     const fetchQueue = async () => {
         setIsLoading(true);
         try {
-            const res = await axios.get("http://localhost:8082/api/queue");
-            setQueue(res.data.data);
+            const res = await api.get("/api/queue");
+            setQueue(res.data);
         } catch (err) {
-            console.error("Failed to fetch LATER queue", err);
+            console.error("Failed to fetch queue", err);
         } finally {
             setIsLoading(false);
         }
